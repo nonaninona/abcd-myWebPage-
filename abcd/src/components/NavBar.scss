@@ -1,0 +1,40 @@
+nav {
+	width:100%;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 1;
+	background:white;
+	border-bottom: 1px solid #DADADA;
+	
+	display: flex;
+	flex-direction: row;
+	img {
+		margin: 0px 100px 0px 30px;
+	}
+	ul { 	
+		list-style-type: none;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		li {
+			font: 20px bold;
+			width:100px;
+			margin: 0px 150px;
+		}
+	}
+}
+
+.link{
+	text-decoration:none;
+	color:black;
+	&:hover{
+		&:visited{
+			&:link{
+				&:active{
+					text-decoration:none;
+				}
+			}
+		}
+	}
+}

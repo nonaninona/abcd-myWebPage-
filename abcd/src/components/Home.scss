@@ -1,0 +1,70 @@
+section {
+	margin: 200px 100px 0px 100px;
+	.section-title {
+		text-align: left;
+		font-size: 50px;
+		font-weight: bold;
+	}
+}
+
+.bookmark{
+	p{
+		height: 300px;
+		width: 1500px; 
+		position:relative; 
+		overflow: hidden;
+		
+		img{
+			height: 300px;
+			position: absolute;
+		}
+	}
+}
+
+.todolist{
+	div{
+		width: 500px;
+		height: 200px;
+		border: 1px solid black;
+		ul{
+			list-style-type: none;
+			display: flex;
+			flex-direction: column;
+			text-align: left;
+			img{
+				margin: 0px 10px 0px 0px;
+			}
+
+			li{
+				height:30px;
+				line-height:30px;
+				position:relative;
+				margin:5px 0px;
+				input {
+					display:none;
+				}
+				label{
+					position:absolute;
+					display:inline-block;
+					width:30px;
+					height:30px;
+					background:#1333DE;
+				}
+				input:checked~label span{
+					position:absolute;
+					left:10px;	
+					display:inline-block;
+					width: 10px;
+					height: 20px;
+					border:1px solid white;
+					border-width: 0px 3px 3px 0px;
+					-webkit-transform: rotate(45deg);
+				}
+				span{
+					position:absolute;
+					left:50px;
+				}
+			}
+		}
+	}
+}
