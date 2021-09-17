@@ -14,7 +14,7 @@ function Coding(){
 		<header>
 		</header>
 		  
-		<NavBar menu={{menu1:false, menu2:true, menu3:true, menu4:true}}></NavBar>
+		<NavBar selectedMenu={1}></NavBar>
 		
 		<main>
 			<section className={'bookmarktechstack'	}>
@@ -38,7 +38,7 @@ function Coding(){
 				<div className={'portfolio'}>
 					<img src={guntor} alt="guntor&guntee" />
 					<p>
-						guntor&guntee는 osam 프로젝트다.
+						guntor&amp;guntee는 osam 프로젝트다.
 					</p>
 				</div>
 			</section>

@@ -9,7 +9,7 @@ function Finance(){
 		<header>
 		</header>
 		  
-		<NavBar menu={{menu1:true, menu2:true, menu3:false, menu4:true}}></NavBar>
+		<NavBar selectedMenu={3}></NavBar>
 		
 		<main>
 			<section className={'finance-status'}>

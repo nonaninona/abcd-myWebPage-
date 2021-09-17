@@ -12,20 +12,30 @@ import { useState } from 'react';
 	className은 -로 구분
 */
 
+function todoList(){
+	
+}
+
+function addList(){
+	
+}
+
 function Home() {
 
 	let [attendanceTime, changeAttendanceTime] = useState(0);
+	let [todoLists, changeTodoLists] = useState({});
+	
 	return (
 	<div>
 
 		<header>
 		</header>
 
-		<NavBar menu={{menu1:true, menu2:true, menu3:true, menu4:true}}></NavBar>
+		<NavBar selectedMenu={1}></NavBar>
 
 		<main>
 			<section className={'attendance-book'}>
-				<div className={'section-title'}>출석부</div>
+				<div className={'section-title'}>Prop 테스트</div>
 				<div className={'attendance-time'} onClick={()=>{changeAttendanceTime(attendanceTime+1)}}>{attendanceTime}</div>
 			</section>
 			<section className={'bookmark'}>
@@ -40,6 +50,8 @@ function Home() {
 			<section className={'todo'}>
 				<div className={'section-title'}>오늘의 할 일</div>
 				<div className={'todolist-board'}>
+					<div className={'add-list'} style={{fontSize:'40px'}} onClick={addList}>+</div>
+					{
 					<ul className={'todolist'}>
 						<li className={'todoline'}>
 							<input type="checkbox" id="todo1" /><label className={'my-checkbox'} htmlFor="todo1"><span className={'my-checkmark'} /></label>
@@ -57,6 +69,7 @@ function Home() {
 							<span>디자인 공부하기</span>
 						</li>
 					</ul>
+					}
 				</div>
 			</section>
 		</main>

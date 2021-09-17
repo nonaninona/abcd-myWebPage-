@@ -9,7 +9,7 @@ function Plan(){
 		<header>
 		</header>
 		  
-		<NavBar menu={{menu1:true, menu2:true, menu3:true, menu4:false}}></NavBar>
+		<NavBar selectedMenu={4}></NavBar>
 		
 		<main>
 			<section className={'week-plan'}>

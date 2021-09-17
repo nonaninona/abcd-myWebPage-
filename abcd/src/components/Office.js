@@ -11,7 +11,7 @@ function Office(){
 		<header>
 		</header>
 		  
-		<NavBar menu={{menu1:true, menu2:false, menu3:true, menu4:true}}></NavBar>
+		<NavBar selectedMenu={2}></NavBar>
 		
 		<main>
 			<section className={'office-bookmark'}>
