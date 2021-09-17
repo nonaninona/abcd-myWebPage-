@@ -4,6 +4,7 @@ import jandi from '../images/JANDI.png';
 import notion from '../images/Notion.png';
 import NavBar from './NavBar.js';
 import './Home.scss';
+import { useState } from 'react';
 
 /* 
 
@@ -12,32 +13,49 @@ import './Home.scss';
 */
 
 function Home() {
-  return (
-    <div>
-		  
+
+	let [attendanceTime, changeAttendanceTime] = useState(0);
+	return (
+	<div>
+
 		<header>
 		</header>
-		  
-		<NavBar></NavBar>
-		
+
+		<NavBar menu={{menu1:true, menu2:true, menu3:true, menu4:true}}></NavBar>
+
 		<main>
+			<section className={'attendance-book'}>
+				<div className={'section-title'}>출석부</div>
+				<div className={'attendance-time'} onClick={()=>{changeAttendanceTime(attendanceTime+1)}}>{attendanceTime}</div>
+			</section>
 			<section className={'bookmark'}>
 				<div className={'section-title'}>자주 가는 사이트</div>
-				<p>
-					<a href="https://github.com/" target="_blank" rel="noreferrer"><img style={{left: '0px'}} src={github} alt={'github'} /></a>
-					<a href="https://www.figma.com/" target="_blank" rel="noreferrer"><img style={{left: '300px'}} src={figma} alt={'figma'} /></a>
-					<a href="https://www.jandi.com//" target="_blank" rel="noreferrer"><img style={{left: '600px'}} src={jandi} alt={'jandi'} /></a>
-					<a href="https://www.notion.so/" target="_blank" rel="noreferrer"><img style={{left: '900px'}} src={notion} alt={'notion'} /></a>
+				<p className={'bookmark-images'}>
+					<a href="https://github.com/" target="_blank" rel="noreferrer"><img className={'bookmark-image'} style={{left: '0px'}} src={github} alt={'github'} /></a>
+					<a href="https://www.figma.com/" target="_blank" rel="noreferrer"><img className={'bookmark-image'} style={{left: '300px'}} src={figma} alt={'figma'} /></a>
+					<a href="https://www.jandi.com//" target="_blank" rel="noreferrer"><img className={'bookmark-image'} style={{left: '600px'}} src={jandi} alt={'jandi'} /></a>
+					<a href="https://www.notion.so/" target="_blank" rel="noreferrer"><img className={'bookmark-image'} style={{left: '900px'}} src={notion} alt={'notion'} /></a>
 				</p>
 			</section>
-			<section className={'todolist'}>
+			<section className={'todo'}>
 				<div className={'section-title'}>오늘의 할 일</div>
-				<div>
-					<ul>
-						<li><input type="checkbox" id="todo1" /><label htmlFor="todo1"><span /></label><span>코딩 공부하기</span></li>
-						<li><input type="checkbox" id="todo2" /><label htmlFor="todo2"><span /></label><span>계획표 짜기</span></li>
-						<li><input type="checkbox" id="todo3" /><label htmlFor="todo3"><span /></label><span>독서하기</span></li>
-						<li><input type="checkbox" id="todo4" /><label htmlFor="todo4"><span /></label><span>디자인 공부하기</span></li>
+				<div className={'todolist-board'}>
+					<ul className={'todolist'}>
+						<li className={'todoline'}>
+							<input type="checkbox" id="todo1" /><label className={'my-checkbox'} htmlFor="todo1"><span className={'my-checkmark'} /></label>
+							<span>코딩 공부하기</span></li>
+						<li className={'todoline'}>
+							<input type="checkbox" id="todo2" /><label className={'my-checkbox'} htmlFor="todo2"><span className={'my-checkmark'} /></label>
+							<span>계획표 짜기</span>
+						</li>
+						<li className={'todoline'}>
+							<input type="checkbox" id="todo3" /><label className={'my-checkbox'} htmlFor="todo3"><span className={'my-checkmark'} /></label>
+							<span>독서하기</span>
+						</li>
+						<li className={'todoline'}>
+							<input type="checkbox" id="todo4" /><label className={'my-checkbox'} htmlFor="todo4"><span className={'my-checkmark'} /></label>
+							<span>디자인 공부하기</span>
+						</li>
 					</ul>
 				</div>
 			</section>
@@ -45,8 +63,8 @@ function Home() {
 
 		<footer>
 		</footer>
-    </div>
-  );
+	</div>
+	);
 }
 
 export default Home;

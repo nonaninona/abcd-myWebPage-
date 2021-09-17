@@ -14,11 +14,11 @@ function Coding(){
 		<header>
 		</header>
 		  
-		<NavBar></NavBar>
+		<NavBar menu={{menu1:false, menu2:true, menu3:true, menu4:true}}></NavBar>
 		
 		<main>
 			<section className={'bookmarktechstack'	}>
-				<h2>관심 있는 기술 스택</h2>
+				<div className={'section-title'}>관심 있는 기술 스택</div>
 				<p>
 					<img src={GitHub} alt="GitHub"></img>
 					<img src={HTMLCSSJS} alt="HTML/CSS/JS"></img>
@@ -26,16 +26,21 @@ function Coding(){
 					<img src={Notion} alt="Notion"></img>
 				</p>
 			</section>
-			<section className={'portfolio'}>
-				<h2>포트폴리오</h2>
-				<p>
-					<img className={'logo'} src={logo} alt="logo"></img>
-					L2H는 나의 각종 업무를 도와주는 웹페이지이다.
-				</p>
-				<p>
-					<img src={guntor} alt="guntor&guntee"></img>
-					guntor guntee는 osam 프로젝트다.
-				</p>
+			<section className={'portfolios'}>
+				<div className={'section-title'}>포트폴리오</div>
+				
+				<div className={'portfolio'}>
+					<img className={'logo'} src={logo} alt="logo" />
+					<p>	
+						L2H는 나의 각종 업무를 도와주는 웹페이지이다.
+					</p>
+				</div>
+				<div className={'portfolio'}>
+					<img src={guntor} alt="guntor&guntee" />
+					<p>
+						guntor&guntee는 osam 프로젝트다.
+					</p>
+				</div>
 			</section>
 		</main>
 

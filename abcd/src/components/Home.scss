@@ -1,41 +1,32 @@
-section {
-	margin: 200px 100px 0px 100px;
-	.section-title {
-		text-align: left;
-		font-size: 50px;
-		font-weight: bold;
-	}
-}
+@import './section.scss';
+@import "~bootstrap/scss/bootstrap";
 
 .bookmark{
-	p{
+	.bookmark-images {
 		height: 300px;
 		width: 1500px; 
 		position:relative; 
 		overflow: hidden;
 		
-		img{
+		.bookmark-image {
 			height: 300px;
 			position: absolute;
 		}
 	}
 }
 
-.todolist{
-	div{
+.todo{
+	.todolist-board {
 		width: 500px;
 		height: 200px;
 		border: 1px solid black;
-		ul{
+		.todolist {
 			list-style-type: none;
 			display: flex;
 			flex-direction: column;
 			text-align: left;
-			img{
-				margin: 0px 10px 0px 0px;
-			}
 
-			li{
+			.todoline {
 				height:30px;
 				line-height:30px;
 				position:relative;
@@ -43,14 +34,14 @@ section {
 				input {
 					display:none;
 				}
-				label{
+				.my-checkbox {
 					position:absolute;
 					display:inline-block;
 					width:30px;
 					height:30px;
 					background:#1333DE;
 				}
-				input:checked~label span{
+				input:checked~.my-checkbox .my-checkmark{
 					position:absolute;
 					left:10px;	
 					display:inline-block;

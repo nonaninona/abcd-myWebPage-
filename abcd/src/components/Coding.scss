@@ -1,9 +1,19 @@
+@import './section.scss';
+@import "~bootstrap/scss/bootstrap";
+
 .bookmarktechstack{
 	img{
+		margin : 10px;
 		height:300px;
 	}
 }
 
-.logo{
-	border : 1px solid black;
+
+.portfolios {
+	.logo{
+		border : 1px solid black;
+	}
+	.portfolio{
+		margin: 30px 0px 100px 0px;
+	}
 }
