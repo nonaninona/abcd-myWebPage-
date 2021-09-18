@@ -16,46 +16,4 @@
 }
 
 .todo{
-	.todolist-board {
-		width: 500px;
-		height: 500px;
-		border: 1px solid black;
-		.todolist {
-			list-style-type: none;
-			display: flex;
-			flex-direction: column;
-			text-align: left;
-
-			.todoline {
-				height:30px;
-				line-height:30px;
-				position:relative;
-				margin:5px 0px;
-				input {
-					display:none;
-				}
-				.my-checkbox {
-					position:absolute;
-					display:inline-block;
-					width:30px;
-					height:30px;
-					background:#1333DE;
-				}
-				input:checked~.my-checkbox .my-checkmark{
-					position:absolute;
-					left:10px;	
-					display:inline-block;
-					width: 10px;
-					height: 20px;
-					border:1px solid white;
-					border-width: 0px 3px 3px 0px;
-					-webkit-transform: rotate(45deg);
-				}
-				span{
-					position:absolute;
-					left:50px;
-				}
-			}
-		}
-	}
 }
