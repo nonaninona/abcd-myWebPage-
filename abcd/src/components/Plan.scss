@@ -1,2 +1,10 @@
 @import './section.scss';
 @import "~bootstrap/scss/bootstrap";
+
+.week-plan{
+	img{
+		width:1000px;
+		border:1px solid black;
+		border-radius:15px;
+	}
+}
